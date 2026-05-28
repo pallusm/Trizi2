@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Trizi — Auditoria Comercial</title>
+<link rel="stylesheet" href="painel.css">
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#topo" style="text-decoration:none;">
+      <span class="mark">T</span>
+      <span class="txt">
+        <span class="a">Instituto Trizi</span>
+        <span class="b">Auditoria Comercial</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#resultado">Resultado</a>
+      <a href="#origem">Origem</a>
+      <a href="#funil">Funil</a>
+      <a href="#objecoes">Objeções</a>
+      <a href="#recuperacao">Recuperação</a>
+      <a href="#ganhos">Ganhos</a>
+      <a href="#plano">Plano</a>
+    </div>
+    <span class="nav-badge">12–26 Maio 2026</span>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<header class="hero" id="topo" data-screen-label="Hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <span class="hero-confidential">Confidencial · Liderança Instituto Trizi</span>
+      <h1>Não falta <em>demanda</em>.<br/>Falta método <span class="u">depois do interesse</span>.</h1>
+      <p class="hero-sub">
+        Auditamos <strong>88 leads</strong> da quinzena cruzando a planilha do Kommo com a leitura conversa a conversa.
+        O resultado é claro: a clínica atrai mulheres com dor real — e perde a maior parte delas <strong>depois</strong> que demonstram interesse.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="v">88</div>
+          <div class="l">Leads auditados na quinzena</div>
+        </div>
+        <div class="hero-stat">
+          <div class="v risk">47</div>
+          <div class="l">Em risco · ação em até 7 dias</div>
+        </div>
+        <div class="hero-stat">
+          <div class="v">9,1<sup>%</sup></div>
+          <div class="l">Conversão real · 8 em 88</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-photo" style="background-image:url('assets/janifer-portrait.png');"></div>
+      <div class="hero-tag">
+        <div class="a">Dra. Janifer Trizi</div>
+        <div class="b">Ginecologia · Menopausa · Medicina Integrativa</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ DASHBOARD CARDS ═══════════════ -->
+<section class="section paper-tex" id="painel" data-screen-label="Painel" style="padding-top:64px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">I.</span> Painel da quinzena</span>
+      <h2 class="h-sec">Os dez números que importam.</h2>
+      <p class="deck">Recorte de <em>12 a 26 de maio de 2026</em> — 88 leads lidos um a um. Tudo abaixo é dado auditado, não estimativa.</p>
+    </div>
+
+    <div class="cards reveal">
+      <div class="card"><div class="c-lab">Leads auditados</div><div class="c-num">88</div><div class="c-sub">Base lida na quinzena</div></div>
+      <div class="card good"><div class="c-lab">Ganhos reais</div><div class="c-num">8</div><div class="c-sub">Consultas confirmadas e pagas</div></div>
+      <div class="card feature"><div class="c-lab">Receita confirmada</div><div class="c-num"><span class="pre">R$</span>14,4<span class="unit">k</span></div><div class="c-sub">Auditada — não a marcada no CRM</div></div>
+      <div class="card accent"><div class="c-lab">Leads em risco</div><div class="c-num">47</div><div class="c-sub">53% da base · ação imediata</div></div>
+      <div class="card accent"><div class="c-lab">Quentes sem conversão</div><div class="c-num">45</div><div class="c-sub">53 quentes — só 8 fecharam</div></div>
+      <div class="card"><div class="c-lab">Follow-up necessário</div><div class="c-num">76</div><div class="c-sub">Sem cadência de retomada</div></div>
+      <div class="card"><div class="c-lab">Origem para revisar</div><div class="c-num">35</div><div class="c-sub">Sem origem no CRM</div></div>
+      <div class="card"><div class="c-lab">Áudios sem transcrição</div><div class="c-num">44</div><div class="c-sub">Pontos cegos de auditoria</div></div>
+      <div class="card accent"><div class="c-lab">Encerramento inadequado</div><div class="c-num">16</div><div class="c-sub">Risco de imagem da marca</div></div>
+      <div class="card accent"><div class="c-lab">Possíveis perdas</div><div class="c-num">53</div><div class="c-sub">60% da base auditada</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DIAGNÓSTICO (burgundy) ═══════════════ -->
+<section class="section bleed-dark" id="diagnostico" data-screen-label="Diagnóstico">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark"><span class="num">II.</span> Diagnóstico</span>
+    </div>
+    <div class="diag-grid">
+      <div class="diag-lead reveal">
+        A clínica <em>não tem</em> problema de gerar interesse.<br/>Tem problema de <em>transformar</em> interesse em consulta.
+      </div>
+      <div class="diag-points reveal">
+        <div class="diag-point">
+          <div class="pn">01</div>
+          <div>
+            <h4>Vazamento comercial depois do interesse inicial</h4>
+            <p>Leads com intenção clara — pedem valor, agenda ou explicam dores fortes — não chegam ao agendamento confirmado. A perda se concentra na condução pós-interesse.</p>
+          </div>
+        </div>
+        <div class="diag-point">
+          <div class="pn">02</div>
+          <div>
+            <h4>CRM fraco para provar ROI</h4>
+            <p>Origem vazia, inconsistente ou mal preenchida em boa parte dos casos. Sem nenhuma UTM na planilha, fica difícil ler tráfego, Instagram, site e indicação.</p>
+          </div>
+        </div>
+        <div class="diag-point">
+          <div class="pn">03</div>
+          <div>
+            <h4>Atendimento da SDR precisa de ajuste</h4>
+            <p>Há bons momentos — quando conduz até valor, data, dados e sinal. Mas falham preço adiado, follow-up genérico, encerramento com tom inadequado e áudio sem transcrição.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RESULTADO / STATUS ═══════════════ -->
+<section class="section paper-tex" id="resultado" data-screen-label="Resultado">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">III.</span> Resultado dos 88 leads</span>
+      <h2 class="h-sec">Mais da metade está <em>em risco</em>.</h2>
+      <p class="deck">A taxa de ganho real no recorte é de 8 em 88. À esquerda, a classificação final da auditoria; à direita, o status recomendado para a dashboard.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="bars reveal">
+        <div class="head">
+          <span class="meta">Classificação final</span>
+          <span class="meta meta-dim">N = 88</span>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Possível perda <span class="pct">60,2%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:100%"></div></div><div class="n">53</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Em aberto <span class="pct">23,9%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill warn grow" style="width:39.6%"></div></div><div class="n">21</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Convertido <span class="pct">9,1%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill good grow" style="width:15.1%"></div></div><div class="n">8</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Inconclusivo <span class="pct">3,4%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:5.7%"></div></div><div class="n">3</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Fora da política comercial <span class="pct">3,4%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:5.7%"></div></div><div class="n">3</div></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot-risk"></i> Perda</span>
+          <span><i class="dot-warn"></i> Aberto</span>
+          <span><i class="dot-good"></i> Ganho</span>
+          <span><i class="dot-neu"></i> Outros</span>
+        </div>
+      </div>
+
+      <div class="bars reveal">
+        <div class="head">
+          <span class="meta">Status recomendado · dashboard</span>
+          <span class="meta meta-dim">N = 88</span>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Risco <span class="pct">53,4%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:100%"></div></div><div class="n">47</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Em acompanhamento <span class="pct">19,3%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill warn grow" style="width:36.2%"></div></div><div class="n">17</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Revisar dados <span class="pct">14,8%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:27.7%"></div></div><div class="n">13</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Ganho <span class="pct">9,1%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill good grow" style="width:17%"></div></div><div class="n">8</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="lab">Fora da política <span class="pct">3,4%</span></div>
+          <div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:6.4%"></div></div><div class="n">3</div></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot-risk"></i> Risco</span>
+          <span><i class="dot-warn"></i> Acompanhamento</span>
+          <span><i class="dot-neu"></i> Revisar / outros</span>
+          <span><i class="dot-good"></i> Ganho</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ O GARGALO + FALHAS ═══════════════ -->
+<section class="section paper-tex" data-screen-label="Gargalo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">IV.</span> O gargalo</span>
+      <h2 class="h-sec">53 leads quentes. Apenas 8 viraram consulta.</h2>
+      <p class="deck">São <em>45 leads quentes sem conversão confirmada</em>. A R$ 1.800 por consulta, isso representa até R$ 81.000 em potencial bruto não convertido — e recuperar só 10% já vale cerca de R$ 8.100.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="bars reveal">
+        <div class="head">
+          <span class="meta">Tags operacionais mais frequentes</span>
+          <span class="meta meta-dim">N = 88</span>
+        </div>
+        <div class="bar-row"><div class="lab">Follow-up necessário</div><div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:100%"></div></div><div class="n">76</div></div></div>
+        <div class="bar-row"><div class="lab">Lead quente</div><div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:69.7%"></div></div><div class="n">53</div></div></div>
+        <div class="bar-row"><div class="lab">Sem agendamento confirmado</div><div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:65.8%"></div></div><div class="n">50</div></div></div>
+        <div class="bar-row"><div class="lab">Áudio sem transcrição</div><div class="vis"><div class="bar-track"><div class="bar-fill warn grow" style="width:57.9%"></div></div><div class="n">44</div></div></div>
+        <div class="bar-row"><div class="lab">Pedido de preço</div><div class="vis"><div class="bar-track"><div class="bar-fill warn grow" style="width:57.9%"></div></div><div class="n">44</div></div></div>
+        <div class="bar-row"><div class="lab">Sem origem</div><div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:46.1%"></div></div><div class="n">35</div></div></div>
+        <div class="bar-row"><div class="lab">Pedido de convênio</div><div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:18.4%"></div></div><div class="n">14</div></div></div>
+        <div class="bar-row"><div class="lab">Boa condução</div><div class="vis"><div class="bar-track"><div class="bar-fill good grow" style="width:10.5%"></div></div><div class="n">8</div></div></div>
+      </div>
+
+      <div class="bars reveal">
+        <div class="head">
+          <span class="meta">Falha principal por lead</span>
+          <span class="meta meta-dim">N = 88</span>
+        </div>
+        <div class="bar-row"><div class="lab">Lead sem resposta</div><div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:100%"></div></div><div class="n">33</div></div></div>
+        <div class="bar-row"><div class="lab">Falha da SDR</div><div class="vis"><div class="bar-track"><div class="bar-fill grow" style="width:69.7%"></div></div><div class="n">23</div></div></div>
+        <div class="bar-row"><div class="lab">Nenhuma falha clara</div><div class="vis"><div class="bar-track"><div class="bar-fill good grow" style="width:39.4%"></div></div><div class="n">13</div></div></div>
+        <div class="bar-row"><div class="lab">Dados insuficientes</div><div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:33.3%"></div></div><div class="n">11</div></div></div>
+        <div class="bar-row"><div class="lab">CRM</div><div class="vis"><div class="bar-track"><div class="bar-fill warn grow" style="width:15.2%"></div></div><div class="n">5</div></div></div>
+        <div class="bar-row"><div class="lab">Política comercial</div><div class="vis"><div class="bar-track"><div class="bar-fill neu grow" style="width:9.1%"></div></div><div class="n">3</div></div></div>
+        <p style="font-family:var(--font-serif); font-style:italic; font-size:15px; line-height:1.5; color:var(--ink); margin-top:24px;">
+          “Lead sem resposta” não é fim de funil. A maioria parou <strong style="font-style:normal;color:var(--burgundy);">depois</strong> de receber valor, datas ou pedido de dados — e nunca recebeu uma retomada estratégica.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RECEITA: KOMMO vs AUDITORIA ═══════════════ -->
+<section class="section paper-tex" data-screen-label="Receita">
+  <div class="wrap-tight">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">V.</span> Kommo vs. realidade</span>
+      <h2 class="h-sec">O CRM pode estar <em>superestimando</em> o resultado.</h2>
+      <p class="deck">Nove leads aparecem na planilha como venda de R$ 1.800 com pagamento PIX. A auditoria confirma apenas oito.</p>
+    </div>
+
+    <div class="rev-grid reveal">
+      <div class="rev-cell">
+        <div class="tag">Receita marcada na planilha</div>
+        <div class="amt"><span class="cur">R$</span>16.200</div>
+        <div class="note">9 leads na etapa “Confirmação de Pagamento”</div>
+      </div>
+      <div class="rev-cell confirmed">
+        <div class="tag">Receita confirmada pela auditoria</div>
+        <div class="amt"><span class="cur">R$</span>14.400</div>
+        <div class="note">8 ganhos reais — diferença de R$ 1.800</div>
+      </div>
+    </div>
+
+    <div class="rev-callout reveal">
+      O lead <strong>19376037</strong> aparece como venda, mas pagou sinal, agendou e depois pediu cancelamento/reembolso por logística internacional. Falta uma etapa clara para <strong>cancelado · reembolsado · não compareceu · sinal devolvido</strong>.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ORIGEM / ROI ═══════════════ -->
+<section class="section paper-tex" id="origem" data-screen-label="Origem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">VI.</span> Origem &amp; atribuição</span>
+      <h2 class="h-sec">O CRM não prova de onde vem o dinheiro.</h2>
+      <p class="deck">35 dos 88 leads estavam <em>sem origem</em> no Kommo. Instagram é o maior volume — e onde mais se perde, porque é o maior volume.</p>
+    </div>
+
+    <div class="tbl origin reveal">
+      <div class="th src">Canal de origem (Kommo)</div>
+      <div class="th right">Leads</div>
+      <div class="th">Ganhos</div>
+      <div class="th right">Leitura</div>
+
+      <div class="td src">Instagram<span class="sub">@dra.janifertrizi</span></div>
+      <div class="td num right">36</div>
+      <div class="td"><div class="attr good"><div class="attr-bar good"><i class="grow" style="width:100%"></i></div><div class="lab">5 ganhos · maior volume</div></div></div>
+      <div class="td right"><span class="pill good">Manter</span></div>
+
+      <div class="td src">Sem origem<span class="sub">Campo vazio no CRM</span></div>
+      <div class="td num right">35</div>
+      <div class="td"><div class="attr crit"><div class="attr-bar crit"><i class="grow" style="width:97%"></i></div><div class="lab">0 ganhos · reclassificar</div></div></div>
+      <div class="td right"><span class="pill crit">Revisar</span></div>
+
+      <div class="td src">Indicação<span class="sub">Paciente indica paciente</span></div>
+      <div class="td num right">6</div>
+      <div class="td"><div class="attr good"><div class="attr-bar good"><i class="grow" style="width:33%"></i></div><div class="lab">2 ganhos · alta conversão</div></div></div>
+      <div class="td right"><span class="pill good">Replicar</span></div>
+
+      <div class="td src">Paciente da base<span class="sub">Retorno de paciente</span></div>
+      <div class="td num right">4</div>
+      <div class="td"><div class="attr good"><div class="attr-bar good"><i class="grow" style="width:22%"></i></div><div class="lab">1 ganho</div></div></div>
+      <div class="td right"><span class="pill good">Manter</span></div>
+
+      <div class="td src">Paciente Hospital Brasil<span class="sub">Origem institucional</span></div>
+      <div class="td num right">3</div>
+      <div class="td"><div class="attr neu"><div class="attr-bar"><i class="grow" style="width:16%"></i></div><div class="lab">0 ganhos</div></div></div>
+      <div class="td right"><span class="pill neu">Investigar</span></div>
+
+      <div class="td src">Tráfego pago<span class="sub">Mídia · Meta</span></div>
+      <div class="td num right">2</div>
+      <div class="td"><div class="attr warn"><div class="attr-bar warn"><i class="grow" style="width:10%"></i></div><div class="lab">0 ganhos · sem prova</div></div></div>
+      <div class="td right"><span class="pill warn">Ajustar</span></div>
+
+      <div class="td src" style="border-bottom:1px solid var(--line-2);">Site<span class="sub">Formulário / busca</span></div>
+      <div class="td num right" style="border-bottom:1px solid var(--line-2);">2</div>
+      <div class="td" style="border-bottom:1px solid var(--line-2);"><div class="attr warn"><div class="attr-bar warn"><i class="grow" style="width:10%"></i></div><div class="lab">0 ganhos · sem prova</div></div></div>
+      <div class="td right" style="border-bottom:1px solid var(--line-2);"><span class="pill warn">Ajustar</span></div>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:64px; margin-bottom:24px;">
+      <span class="eyebrow"><span class="num">·</span> Recuperação de origem</span>
+      <h2 class="h-sec" style="font-size:clamp(26px,3vw,36px);">29 dos 35 “sem origem” dão para recuperar.</h2>
+      <p class="deck">A SDR não categorizou — mas, em muitos casos, a primeira mensagem do lead permite inferir o canal.</p>
+    </div>
+
+    <div class="inferred reveal">
+      <div class="lead">
+        <div class="big">29<span style="font-size:24px;color:var(--cream-soft);">/35</span></div>
+        <div class="lab">leads sem origem recuperáveis pela leitura da primeira mensagem</div>
+      </div>
+      <div><div class="k">15</div><div class="kl">Inferidos como Instagram</div></div>
+      <div><div class="k">13</div><div class="kl">Inferidos como Tráfego</div></div>
+      <div><div class="k">1<span style="font-size:18px;color:var(--sand);"> · 6</span></div><div class="kl">Site declarado · sem inferência</div></div>
+    </div>
+
+    <!-- CRM quality -->
+    <div class="section-head reveal" style="margin-top:64px; margin-bottom:24px;">
+      <span class="eyebrow"><span class="num">·</span> Qualidade do CRM</span>
+      <h2 class="h-sec" style="font-size:clamp(26px,3vw,36px);">Campos que não estão sendo preenchidos.</h2>
+      <p class="deck">No recorte dos 88 leads auditados. Sem esses campos, não há como provar ROI nem entender o motivo da perda.</p>
+    </div>
+    <div class="cards reveal" style="border-left:1px solid var(--line);">
+      <div class="card accent"><div class="c-lab">Motivo de perda vazio</div><div class="c-num">88<span class="unit">/88</span></div><div class="c-sub">Nenhum motivo registrado</div></div>
+      <div class="card accent"><div class="c-lab">Cidade vazia</div><div class="c-num">88<span class="unit">/88</span></div><div class="c-sub">Zero geolocalização</div></div>
+      <div class="card accent"><div class="c-lab">UTMs preenchidas</div><div class="c-num">0<span class="unit">/88</span></div><div class="c-sub">Atribuição de mídia cega</div></div>
+      <div class="card"><div class="c-lab">Especialidade vazia</div><div class="c-num">36<span class="unit">/88</span></div><div class="c-sub">Sem segmentação clínica</div></div>
+      <div class="card"><div class="c-lab">Origem · Campanha · Proprietário vazios</div><div class="c-num">35<span class="unit">/88</span></div><div class="c-sub">Cerca de 40% da base</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FUNIL ═══════════════ -->
+<section class="section paper-tex" id="funil" data-screen-label="Funil">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">VII.</span> Funil do Kommo</span>
+      <h2 class="h-sec">As etapas não refletem a realidade.</h2>
+      <p class="deck">Cruzando a etapa marcada no Kommo com o status real da auditoria, fica claro que “Oportunidade” virou um balde genérico — e “Conexão” guarda leads que já deveriam estar como perdidos.</p>
+    </div>
+
+    <div class="funnel reveal">
+      <div class="stage">
+        <div class="sh"><span class="sname">Etapa 01 · Conexão</span><span class="stot">35</span></div>
+        <p class="desc">Muito lead que já deveria estar como perdido, recuperação, sem resposta ou fora da política continua aqui.</p>
+        <div class="split">
+          <div class="srow"><span class="sl"><i class="dot-risk"></i> Risco</span><span class="sv">19</span></div>
+          <div class="srow"><span class="sl"><i class="dot-warn"></i> Em acompanhamento</span><span class="sv">11</span></div>
+          <div class="srow"><span class="sl"><i class="dot-neu"></i> Fora política</span><span class="sv">3</span></div>
+          <div class="srow"><span class="sl"><i class="dot-neu"></i> Revisar dados</span><span class="sv">2</span></div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="sh"><span class="sname">Etapa 02 · Oportunidade</span><span class="stot">44</span></div>
+        <p class="desc">Ampla demais. Mistura lead quente, lead parado, preço já enviado, sem resposta e lead que precisa de revisão.</p>
+        <div class="split">
+          <div class="srow"><span class="sl"><i class="dot-risk"></i> Risco</span><span class="sv">28</span></div>
+          <div class="srow"><span class="sl"><i class="dot-neu"></i> Revisar dados</span><span class="sv">10</span></div>
+          <div class="srow"><span class="sl"><i class="dot-warn"></i> Em acompanhamento</span><span class="sv">6</span></div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="sh"><span class="sname">Etapa 04 · Pagamento</span><span class="stot">9</span></div>
+        <p class="desc">Precisa separar sinal solicitado, sinal pago, confirmado, cancelado, reembolso, no-show e reagendamento.</p>
+        <div class="split">
+          <div class="srow"><span class="sl"><i class="dot-good"></i> Ganho real</span><span class="sv">8</span></div>
+          <div class="srow"><span class="sl"><i class="dot-neu"></i> Revisar / possível perda</span><span class="sv">1</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OBJEÇÕES ═══════════════ -->
+<section class="section paper-tex" id="objecoes" data-screen-label="Objeções">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">VIII.</span> Objeções</span>
+      <h2 class="h-sec">Preço e convênio travam — mas não explicam tudo.</h2>
+      <p class="deck">Perguntar preço ou convênio não significa lead ruim. O problema é <em>como</em> e <em>quando</em> a resposta é conduzida.</p>
+    </div>
+
+    <div class="obj-grid">
+      <div class="obj reveal">
+        <div class="ohead">
+          <span class="otitle">Pedido de <span>preço</span></span>
+          <span class="obig">44<sup>leads</sup></span>
+        </div>
+        <div class="mini">
+          <div><span>Risco</span><b>26</b></div>
+          <div><span>Revisar dados</span><b>10</b></div>
+          <div><span>Ganho</span><b>7</b></div>
+          <div><span>Fora política</span><b>1</b></div>
+        </div>
+        <p class="insight"><strong>7 dos 8 ganhos também pediram preço.</strong> O problema não é falar o investimento — é responder “qual seu nome e cidade?” quando o lead pergunta o valor.</p>
+        <div class="script">
+          <div class="sl">Sequência que converte alto ticket</div>
+          <p>Validação da dor → método em uma frase → investimento claro → próximo passo objetivo → data disponível → follow-up personalizado.</p>
+        </div>
+      </div>
+
+      <div class="obj reveal">
+        <div class="ohead">
+          <span class="otitle">Pedido de <span>convênio</span></span>
+          <span class="obig">14<sup>leads</sup></span>
+        </div>
+        <div class="mini">
+          <div><span>Risco</span><b>7</b></div>
+          <div><span>Fora política</span><b>3</b></div>
+          <div><span>Ganho</span><b>2</b></div>
+          <div><span>Revisar dados</span><b>2</b></div>
+        </div>
+        <p class="insight">Alguns leads seguiram mesmo depois de saber que é particular. <strong>Perguntar convênio não é perda automática</strong> — o erro é a resposta confusa que não conduz ao valor do particular.</p>
+        <div class="script">
+          <div class="sl">Resposta-padrão · direta e elegante</div>
+          <p>“Hoje o atendimento da Dra. Janifer é particular, justamente por ser uma consulta mais completa, investigativa e individualizada. Eu te explico como funciona e, se fizer sentido, já vejo as próximas datas.”</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- encerramento -->
+    <div class="section-head reveal" style="margin-top:72px; margin-bottom:28px;">
+      <span class="eyebrow"><span class="num">·</span> Encerramento</span>
+    </div>
+    <div class="closing reveal">
+      <div class="big">16<sup>leads</sup></div>
+      <div class="body">
+        <p>foram encerrados com mensagem inadequada — o padrão citado dizia que o lead “não estava preparado para uma grande transformação”. Isso <strong>faz a pessoa se sentir julgada</strong>, fere a imagem premium e acolhedora, e mata oportunidade futura — em saúde, a decisão leva dias ou semanas.</p>
+        <p>Em alguns casos, o lead <strong>voltou depois</strong> do encerramento. A régua precisa mudar para algo neutro:</p>
+        <div class="script" style="margin-top:14px;">
+          <div class="sl">Régua de encerramento recomendada</div>
+          <p>“Vou deixar seu atendimento em aberto por aqui. Quando fizer sentido para você retomar, me chama que eu te ajudo com as próximas datas da Dra. Janifer.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RECUPERAÇÃO ═══════════════ -->
+<section class="section paper-tex" id="recuperacao" data-screen-label="Recuperação">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">IX.</span> Recuperação prioritária</span>
+      <h2 class="h-sec">Quatro grupos para agir agora.</h2>
+      <p class="deck">A maior oportunidade imediata é recuperar os <em>45 leads quentes sem conversão</em>. Estes são os grupos, em ordem de prioridade.</p>
+    </div>
+
+    <div class="groups reveal">
+      <div class="group">
+        <div class="ghead">
+          <div>
+            <div class="gnum">Grupo 1 · Alta prioridade</div>
+            <h3>Leads quentes sem conversão</h3>
+          </div>
+          <div class="gcount">20</div>
+        </div>
+        <p>Dor forte, pedido de preço, agenda ou tratamento — mas sem conversão. Retomada personalizada, citando a dor específica e oferecendo próximo passo objetivo.</p>
+        <div class="ids">
+          <span class="id hot">19521732</span><span class="id hot">19519048</span><span class="id hot">19515684</span><span class="id hot">19513344</span><span class="id hot">19512568</span><span class="id hot">19505474</span><span class="id hot">19474030</span><span class="id hot">19470072</span><span class="id hot">19460578</span><span class="id hot">19459648</span><span class="id hot">19451442</span><span class="id hot">19428868</span><span class="id hot">19420968</span><span class="id hot">19415549</span><span class="id hot">19415287</span><span class="id hot">19408811</span><span class="id hot">19372761</span><span class="id hot">19358581</span><span class="id hot">19358097</span><span class="id hot">19348535</span>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="ghead">
+          <div>
+            <div class="gnum">Grupo 2 · Mais valiosos</div>
+            <h3>Escolheram data ou chegaram perto do sinal</h3>
+          </div>
+          <div class="gcount">8</div>
+        </div>
+        <p>Os mais valiosos para recuperar. Merecem follow-up de fechamento — não mensagem genérica.</p>
+        <div class="split" style="margin-top:14px; display:flex; flex-direction:column;">
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19515684</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Chegou em dados/sinal — confirmar pagamento.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19470072</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Escolheu data, enviou dados, recebeu pedido de sinal.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19358097</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Escolheu 14/07, mas não enviou dados.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19451442</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Recebeu datas, ficou de avaliar com o esposo.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19428868</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Agendaria no mês seguinte por questão financeira.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19358581</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Pediu encaixe urgente.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);"><span class="id hot">19348535</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Queria conversar com o marido antes.</span></div>
+          <div class="srow" style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;"><span class="id hot">19372761</span><span style="font-family:var(--font-sans);font-size:12px;color:var(--ink-soft);">Recebeu datas, mas não confirmou.</span></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="ghead">
+          <div>
+            <div class="gnum">Grupo 3 · Nutrição</div>
+            <h3>Travados por valor</h3>
+          </div>
+          <div class="gcount">∿</div>
+        </div>
+        <p>Entram em régua de nutrição e recuperação. Temas para retomada, pela dor real de cada perfil:</p>
+        <div class="themes">
+          <span>Menopausa</span><span>Emagrecimento travado</span><span>Hormônios</span><span>Ex-pacientes</span><span>Mulheres 40+</span><span>Atendimento online</span><span>Consulta comum × avaliação integrativa</span><span>Sinal e parcelamento</span>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="ghead">
+          <div>
+            <div class="gnum">Grupo 4 · Pontos cegos</div>
+            <h3>Áudio sem transcrição</h3>
+          </div>
+          <div class="gcount">44</div>
+        </div>
+        <p>Não significa atendimento ruim — significa que a clínica perde a capacidade de auditar, treinar e provar o que aconteceu. Para os mais quentes, transcrever ou revisar manualmente antes de concluir perda.</p>
+        <div class="action">
+          <span class="al">Ação</span>
+          <span class="at">Transcrição obrigatória nos leads quentes; revisão manual antes de classificar como perda.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GANHOS ═══════════════ -->
+<section class="section paper-tex" id="ganhos" data-screen-label="Ganhos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">X.</span> Onde a SDR acerta</span>
+      <h2 class="h-sec">A sequência dos 8 ganhos — que vira protocolo.</h2>
+      <p class="deck">Nem tudo é problema. Os oito ganhos da quinzena mostram um padrão claro de boa condução. <em>O lado bom da auditoria.</em></p>
+    </div>
+
+    <div class="gains reveal">
+      <div class="gain"><div class="gn">01</div><h4>Entende a dor</h4><p>Abre acolhendo o sintoma real — menopausa, cansaço, emagrecimento — antes de falar de programa.</p></div>
+      <div class="gain"><div class="gn">02</div><h4>Apresenta a experiência premium</h4><p>Posiciona a consulta como completa, investigativa e individualizada, não como atendimento comum.</p></div>
+      <div class="gain"><div class="gn">03</div><h4>Informa o investimento</h4><p>Fala o valor com clareza, no momento certo, sem adiar com perguntas genéricas.</p></div>
+      <div class="gain"><div class="gn">04</div><h4>Oferece datas</h4><p>Conduz para a escolha de uma data concreta, transformando interesse em compromisso.</p></div>
+      <div class="gain"><div class="gn">05</div><h4>Pede os dados</h4><p>Coleta as informações necessárias para o agendamento de forma natural na conversa.</p></div>
+      <div class="gain"><div class="gn">06</div><h4>Solicita o sinal</h4><p>Pede o sinal como passo de confirmação, ancorando o compromisso financeiro.</p></div>
+      <div class="gain"><div class="gn">07</div><h4>Confirma a consulta</h4><p>Fecha o ciclo confirmando data, sinal e próximos passos — sem deixar pontas soltas.</p></div>
+      <div class="gain" style="display:flex;flex-direction:column;justify-content:center;background:var(--paper-2);">
+        <h4 style="margin-top:0;font-style:italic;color:var(--forest);">Padronizar esta sequência é a maior alavanca da quinzena.</h4>
+        <p>Hoje a boa condução existe — mas ainda não é rotina.</p>
+      </div>
+    </div>
+
+    <div class="gains-origin reveal">
+      <div><div class="gk">5</div><div class="gl">Ganhos · Instagram</div></div>
+      <div><div class="gk">2</div><div class="gl">Ganhos · Indicação</div></div>
+      <div><div class="gk">1</div><div class="gl">Ganho · Paciente da base</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PLANO ═══════════════ -->
+<section class="section paper-tex" id="plano" data-screen-label="Plano">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="num">XI.</span> Plano de ação</span>
+      <h2 class="h-sec">Hoje, 7 dias e 30 dias.</h2>
+    </div>
+
+    <div class="plan reveal">
+      <div class="phase">
+        <div class="ph"><span class="pwhen">Hoje</span><span class="ptitle">Ação imediata</span></div>
+        <ol>
+          <li>Remover a mensagem de <strong>encerramento julgadora</strong>.</li>
+          <li>Criar a lista dos <strong>45 leads quentes</strong> sem conversão.</li>
+          <li>Separar os <strong>20 leads</strong> mais próximos de fechamento.</li>
+          <li>Fazer recuperação manual com mensagem personalizada.</li>
+          <li>Conferir dados/sinal/agendamento pendente no Kommo.</li>
+          <li>Corrigir o lead cancelado para não aparecer como venda limpa.</li>
+        </ol>
+      </div>
+      <div class="phase">
+        <div class="ph"><span class="pwhen">7 dias</span><span class="ptitle">Padronizar</span></div>
+        <ol>
+          <li>Padronizar a resposta para <strong>pedido de valor</strong>.</li>
+          <li>Padronizar a resposta para <strong>convênio</strong>.</li>
+          <li>Criar régua de follow-up por objeção: preço, marido, agenda, convênio, “vou ver e retorno”, sem resposta após valor, sem resposta após datas, encaixe urgente.</li>
+          <li>Obrigar origem, campanha, especialidade e motivo de perda.</li>
+          <li>Criar etapas: sinal solicitado, sinal pago, agendado, cancelado, reembolso, no-show, reagendamento.</li>
+        </ol>
+      </div>
+      <div class="phase">
+        <div class="ph"><span class="pwhen">30 dias</span><span class="ptitle">Estruturar</span></div>
+        <ol>
+          <li>Implantar a <strong>dashboard de auditoria comercial</strong>.</li>
+          <li>Treinar a SDR usando os <strong>8 ganhos</strong> como modelo.</li>
+          <li>Criar relatório quinzenal: origem que mais traz quente, que mais converte, objeção e falha dominantes, perdas recuperáveis.</li>
+          <li>Ajustar campanhas e conteúdo pelas dores reais: menopausa, emagrecimento 40+, hormônios, libido, cansaço, endometriose, particular premium.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONCLUSÃO (ink) ═══════════════ -->
+<section class="section bleed-ink" data-screen-label="Conclusão">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark"><span class="num">XII.</span> Conclusão executiva</span>
+    </div>
+    <div class="concl-grid">
+      <div class="concl-lead reveal">
+        Há <em>demanda qualificada</em>. O dinheiro está vazando em três lugares.
+      </div>
+      <div class="concl-three reveal">
+        <div class="ct">
+          <div class="cn">01 · Comercial</div>
+          <div>
+            <h4>Leads quentes param depois de preço, agenda ou pedido de dados</h4>
+            <p>A perda se concentra na condução pós-interesse — falta método e cadência de retomada.</p>
+          </div>
+        </div>
+        <div class="ct">
+          <div class="cn">02 · CRM</div>
+          <div>
+            <h4>Origem e motivo de perda não são confiáveis</h4>
+            <p>Sem isso, é difícil provar ROI e entender qual canal realmente gera oportunidade.</p>
+          </div>
+        </div>
+        <div class="ct">
+          <div class="cn">03 · Processo</div>
+          <div>
+            <h4>O padrão da SDR ainda não é consistente</h4>
+            <p>Mais direta com preço, mais estratégica no follow-up, mais acolhedora no encerramento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="concl-final reveal">
+      A maior oportunidade imediata é recuperar os <strong>45 leads quentes sem conversão</strong>, corrigir os <strong>35 casos de origem para revisão</strong> e transformar os <strong>8 atendimentos ganhos</strong> em modelo de treinamento para a equipe.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="foot" data-screen-label="Rodapé">
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <h5>Auditoria</h5>
+        <div class="who">Auditoria Comercial<span>Instituto Trizi · Dra. Janifer Trizi</span></div>
+        <p>Recorte de 12 a 26 de maio de 2026 · 88 leads lidos um a um, cruzando a planilha do Kommo com a conversa de cada atendimento.</p>
+      </div>
+      <div>
+        <h5>Próximos passos</h5>
+        <p class="timeline">
+          <span class="w">Hoje</span> — Recuperar os 45 quentes<br/>
+          <span class="w">7 dias</span> — Padronizar scripts e etapas<br/>
+          <span class="w">30 dias</span> — Dashboard + treinamento
+        </p>
+      </div>
+      <div>
+        <h5>Confidencialidade</h5>
+        <p class="conf"><strong>Camada agregada</strong>Relatório com dados agregados e padrões observados. Nenhuma informação sensível de paciente foi exposta. Distribuição restrita à liderança do Instituto Trizi.</p>
+      </div>
+    </div>
+    <div class="foot-strip">
+      <div>© 2026 · Auditoria Comercial Instituto Trizi</div>
+      <div class="r">
+        <span>Edição 01</span>
+        <span>V 1.0 · 27 mai</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        var grows = e.target.querySelectorAll('.grow');
+        grows.forEach(function(g, i){ setTimeout(function(){ g.classList.add('in'); }, 80 + i*45); });
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // bars inside sections that are already revealed but observed separately
+  document.querySelectorAll('.bars, .tbl, .inferred').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
