@@ -1,0 +1,179 @@
+/* ─────────────────────────────────────────
+   PLANO DE AÇÃO — playbook comercial
+   Loaded after painel.css (inherits tokens, nav, footer, .script, .bleed-ink)
+   ───────────────────────────────────────── */
+
+/* ── hero ── */
+.plano-hero{ border-bottom: 1px solid var(--line); }
+.plano-hero-inner{ max-width: 1280px; margin: 0 auto; padding: 64px 48px 52px; }
+.plano-hero .eyebrow{ margin-bottom: 22px; }
+.plano-hero h1{
+  font-family: var(--font-serif); font-size: clamp(40px, 5.4vw, 70px); font-weight: 600;
+  line-height: 0.99; letter-spacing: -0.02em; color: var(--ink); max-width: 13ch;
+}
+.plano-hero h1 em{ font-style: italic; color: var(--burgundy); font-weight: 500; }
+.plano-hero .lead{ font-family: var(--font-sans); font-size: 16px; line-height: 1.6; color: var(--ink-soft); max-width: 680px; margin-top: 24px; }
+.plano-hero .lead strong{ color: var(--ink); font-weight: 700; }
+
+/* phase tabs */
+.phase-tabs{ display:flex; gap: 10px; margin-top: 36px; flex-wrap: wrap; }
+.phase-tab{
+  display:flex; flex-direction: column; gap: 3px; text-decoration: none;
+  border: 1px solid var(--line); padding: 14px 22px 13px; transition: all .18s; min-width: 150px;
+}
+.phase-tab:hover{ border-color: var(--burgundy); transform: translateY(-2px); }
+.phase-tab .when{ font-family: var(--font-sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); }
+.phase-tab .what{ font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--ink); }
+.phase-tab .n{ font-family: var(--font-sans); font-size: 11px; font-weight: 600; color: var(--sand); margin-top: 2px; }
+
+/* ── cenário section ── */
+.cen{ max-width: 1280px; margin: 0 auto; padding: 78px 48px; border-top: 1px solid var(--line); }
+.cen.alt{ background: var(--paper-2); max-width: none; }
+.cen.alt > .cen-in{ max-width: 1280px; margin: 0 auto; }
+.phase-head{
+  display:flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+  border-bottom: 3px solid var(--ink); padding-bottom: 22px; margin-bottom: 14px; flex-wrap: wrap;
+}
+.phase-head .lft .when{ font-family: var(--font-sans); font-size: 10.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--burgundy); }
+.phase-head .lft h2{ font-family: var(--font-serif); font-size: clamp(34px, 4.4vw, 56px); font-weight: 600; line-height: 1.0; letter-spacing: -0.02em; color: var(--ink); margin-top: 8px; }
+.phase-head .obj{ font-family: var(--font-serif); font-style: italic; font-size: 16px; color: #4A3829; max-width: 360px; text-align: right; line-height: 1.4; }
+.cen-intro{ font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 760px; margin: 26px 0 8px; }
+.cen-intro strong{ color: var(--ink); font-weight: 700; }
+
+/* ── action list ── */
+.acts{ margin-top: 16px; }
+.act{ display:grid; grid-template-columns: 70px 1fr; gap: 30px; padding: 36px 0; border-top: 1px solid var(--line); }
+.act:first-child{ border-top: 0; }
+.act .num{ font-family: var(--font-serif); font-style: italic; font-size: 46px; font-weight: 600; color: var(--burgundy); line-height: 0.9; }
+.act h3{ font-family: var(--font-serif); font-size: 27px; font-weight: 600; line-height: 1.12; color: var(--ink); letter-spacing: -0.005em; }
+.act .block{ margin-top: 16px; }
+.act .lbl{ font-family: var(--font-sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sand); display:block; margin-bottom: 6px; }
+.act p{ font-family: var(--font-sans); font-size: 14px; line-height: 1.6; color: var(--ink-soft); }
+.act p strong{ color: var(--ink); font-weight: 700; }
+.act .do{ border-left: 3px solid var(--ink); padding-left: 18px; }
+.act .do p{ color: var(--ink); }
+.act .res{
+  margin-top: 16px; font-family: var(--font-serif); font-style: italic; font-size: 14.5px;
+  color: var(--forest); display:flex; align-items: baseline; gap: 10px;
+}
+.act .res::before{ content:"→"; font-style: normal; color: var(--forest); font-weight: 700; }
+
+/* message / script blocks (extends .script) */
+.msg{ background: var(--paper-2); border-left: 3px solid var(--forest); padding: 18px 22px; margin-top: 12px; }
+.cen.alt .msg{ background: #fff; }
+.msg .ml{ font-family: var(--font-sans); font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--forest); margin-bottom: 9px; display:flex; align-items:center; gap:8px; }
+.msg .ml .case{ color: var(--sand-2); }
+.msg p{ font-family: var(--font-serif); font-style: italic; font-size: 15px; line-height: 1.5; color: var(--ink); }
+.msg.bad{ border-left-color: var(--burgundy); }
+.msg.bad .ml{ color: var(--burgundy); }
+.msg.bad p{ color: #6b4a44; }
+.msg-stack{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }
+
+/* id chips inline */
+.idline{ display:flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.idline .id{ font-family: var(--font-sans); font-size: 11px; font-weight: 600; color: var(--burgundy); background: rgba(123,18,52,.06); border: 1px solid rgba(123,18,52,.25); padding: 4px 9px; }
+
+/* link to confidential 20-list */
+.see-list{
+  display:inline-flex; align-items: center; gap: 9px; margin-top: 14px; text-decoration: none;
+  font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--burgundy); border-bottom: 1px solid rgba(123,18,52,.4); padding-bottom: 3px;
+}
+.see-list:hover{ color: var(--crimson); }
+.see-list .arr{ font-family: var(--font-serif); font-style: italic; }
+
+/* ── cadência (follow-up régua) ── */
+.cadence{ border-top: 3px solid var(--ink); margin-top: 16px; }
+.cad-row{ display:grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.cad-obj{ }
+.cad-obj .o{ font-family: var(--font-serif); font-size: 19px; font-weight: 600; color: var(--ink); }
+.cad-obj .tag{ font-family: var(--font-sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sand); display:block; margin-top: 4px; }
+.cad-steps{ display:flex; flex-wrap: wrap; gap: 10px; }
+.cad-step{ display:flex; align-items: baseline; gap: 9px; flex: 1 1 280px; min-width: 240px; }
+.cad-day{ font-family: var(--font-sans); font-size: 10px; font-weight: 800; letter-spacing: 0.06em; color: #fff; background: var(--burgundy); border-radius: 4px; padding: 3px 8px; flex-shrink: 0; }
+.cad-day.now{ background: var(--ink); }
+.cad-step .ct{ font-family: var(--font-sans); font-size: 12.5px; line-height: 1.45; color: var(--ink-soft); }
+
+/* ── chips/pills lists (CRM fields, motivos, dores) ── */
+.pill-cols{ display:grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 8px; }
+.pill-set{ }
+.pill-set .ps-lab{ font-family: var(--font-sans); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand-2); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line-2); }
+.pills{ display:flex; flex-wrap: wrap; gap: 8px; }
+.pills span{ font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px; background: #fff; }
+.cen.alt .pills span{ background: var(--paper); }
+.pills.req span{ border-color: rgba(123,18,52,.3); color: var(--burgundy); }
+
+/* ── pipeline (funnel stages) ── */
+.pipeline{ display:grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-2); border-left: 1px solid var(--line); margin-top: 8px; }
+.pstage{ padding: 18px 18px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
+.cen.alt .pstage{ background: var(--paper); }
+.pstage .pn{ font-family: var(--font-serif); font-style: italic; font-size: 18px; font-weight: 600; color: var(--burgundy); }
+.pstage .pt{ font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--ink); margin-top: 6px; line-height: 1.3; }
+.pstage.flag{ background: rgba(123,18,52,.05); }
+.pstage.flag .pn{ color: var(--crimson); }
+
+/* ── modules ── */
+.modules{ display:grid; grid-template-columns: repeat(2,1fr); gap: 0; border-top: 3px solid var(--ink); border-left: 1px solid var(--line); margin-top: 8px; }
+.mod{ display:grid; grid-template-columns: auto 1fr; gap: 16px; padding: 18px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); align-items: baseline; }
+.mod .mn{ font-family: var(--font-sans); font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: #fff; background: var(--ink); border-radius: 999px; padding: 4px 9px; }
+.mod .mt{ font-family: var(--font-serif); font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+
+/* numbered clean list (quinzenal report) */
+.ol-clean{ list-style: none; counter-reset: oc; columns: 2; column-gap: 48px; margin-top: 8px; }
+.ol-clean li{
+  counter-increment: oc; break-inside: avoid; padding: 11px 0 11px 34px; border-bottom: 1px solid var(--line); position: relative;
+  font-family: var(--font-sans); font-size: 13.5px; color: var(--ink-soft); line-height: 1.4;
+}
+.ol-clean li::before{ content: counter(oc, decimal-leading-zero); position: absolute; left: 0; top: 11px; font-family: var(--font-serif); font-style: italic; font-size: 13px; font-weight: 600; color: var(--burgundy); }
+
+/* ── angles (marketing) ── */
+.angles{ display:flex; flex-direction: column; gap: 0; border-top: 3px solid var(--ink); margin-top: 8px; }
+.angle{ padding: 16px 0; border-bottom: 1px solid var(--line); display:grid; grid-template-columns: auto 1fr; gap: 18px; align-items: baseline; }
+.angle .q{ font-family: var(--font-serif); font-style: italic; font-size: 18px; line-height: 1.4; color: var(--ink); }
+.angle .tagx{ font-family: var(--font-sans); font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sand); padding-top: 5px; }
+
+/* ── dashboard items (cards + tables list) ── */
+.dash-two{ display:grid; grid-template-columns: 1.3fr 1fr; gap: 44px; margin-top: 8px; }
+.dash-block .db-lab{ font-family: var(--font-sans); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand-2); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line-2); }
+
+/* ── indicadores (checklists) ── */
+.checks{ display:grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.check h4{ font-family: var(--font-serif); font-size: 22px; font-weight: 600; color: var(--ink); padding-bottom: 14px; border-bottom: 3px solid var(--forest); }
+.check ul{ list-style: none; margin-top: 6px; }
+.check li{ padding: 13px 0 13px 32px; border-bottom: 1px solid var(--line); position: relative; font-family: var(--font-sans); font-size: 14px; color: var(--ink-soft); line-height: 1.45; }
+.check li::before{ content:"✓"; position: absolute; left: 0; top: 11px; color: var(--forest); font-weight: 800; font-size: 15px; }
+
+/* ── conclusão reuse bleed-ink; custom inner ── */
+.plano-concl{ max-width: 1100px; margin: 0 auto; padding: 84px 48px; text-align: left; }
+.plano-concl .eyebrow{ margin-bottom: 24px; }
+.plano-concl .big{ font-family: var(--font-serif); font-size: clamp(28px, 3.6vw, 46px); font-weight: 500; line-height: 1.14; color: var(--paper); }
+.plano-concl .big em{ font-style: italic; color: #F3C9D2; }
+.plano-concl p{ font-family: var(--font-sans); font-size: 15px; line-height: 1.65; color: var(--cream-on-dark); margin-top: 22px; max-width: 720px; }
+.plano-concl p strong{ color: var(--paper); font-weight: 700; }
+
+/* ── responsive ── */
+@media (max-width: 1080px){
+  .plano-hero-inner, .cen{ padding-left: 32px; padding-right: 32px; }
+  .pill-cols, .msg-stack, .dash-two, .checks{ grid-template-columns: 1fr; gap: 28px; }
+  .pipeline{ grid-template-columns: repeat(2,1fr); }
+  .modules{ grid-template-columns: 1fr; }
+  .ol-clean{ columns: 1; }
+  .cad-row{ grid-template-columns: 1fr; gap: 14px; }
+  .plano-concl{ padding-left: 32px; padding-right: 32px; }
+}
+@media (max-width: 620px){
+  .plano-hero-inner, .cen{ padding-left: 20px; padding-right: 20px; }
+  .pipeline{ grid-template-columns: 1fr; }
+  .act{ grid-template-columns: 1fr; gap: 12px; }
+  .act .num{ font-size: 34px; }
+  .phase-head .obj{ text-align: left; max-width: none; }
+  .angle{ grid-template-columns: 1fr; gap: 6px; }
+  .plano-concl{ padding-left: 20px; padding-right: 20px; }
+}
+
+/* print */
+@media print{
+  .nav, .conf-bar, .phase-tabs{ display:none !important; }
+  body{ background:#fff; }
+  .reveal{ opacity:1 !important; transform:none !important; }
+}

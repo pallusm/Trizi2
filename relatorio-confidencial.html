@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório Confidencial — Recuperação de Leads · Instituto Trizi</title>
+<link rel="stylesheet" href="painel.css">
+<link rel="stylesheet" href="relatorio.css">
+</head>
+<body>
+
+<div class="conf-bar"><span class="dot"></span> Documento Confidencial · Uso restrito à liderança do Instituto Trizi <span class="dot"></span></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" style="text-decoration:none;">
+      <span class="mark">T</span>
+      <span class="txt">
+        <span class="a">Instituto Trizi</span>
+        <span class="b">Auditoria Comercial</span>
+      </span>
+    </a>
+    <div style="display:flex; align-items:center; gap:18px;">
+      <a class="nav-back" href="index.html"><span class="arr">←</span> Painel completo</a>
+      <a class="nav-cta ghost" href="plano-de-acao.html">Plano de Ação</a>
+    </div>
+  </div>
+</nav>
+
+<header class="rpt-hero" data-screen-label="Relatório Confidencial — Hero">
+  <div class="rpt-hero-inner">
+    <span class="eyebrow"><span class="num">Anexo A.</span> Recuperação de receita</span>
+    <h1>Relatório <em>confidencial</em> de leads.</h1>
+    <p class="lead">
+      O mapeamento individual dos <strong>45 leads quentes sem conversão</strong> da quinzena — origem, status, prioridade e resumo da conversa — seguido dos <strong>20 mais próximos de fechar</strong>, cada um com a próxima ação recomendada.
+    </p>
+    <div class="rpt-hero-foot">
+      <div class="rpt-stats">
+        <div class="rpt-stat"><div class="v risk">45</div><div class="l">Leads quentes sem conversão</div></div>
+        <div class="rpt-stat"><div class="v">20</div><div class="l">Mais próximos de fechar</div></div>
+        <div class="rpt-stat"><div class="v"><span class="pre">R$</span>81k</div><div class="l">Potencial bruto não convertido</div></div>
+      </div>
+      <button class="btn-print" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6"></path><rect x="4" y="9" width="16" height="8" rx="1.5"></rect><path d="M7 17h10v4H7z"></path></svg> Imprimir / PDF</button>
+    </div>
+  </div>
+</header>
+
+<section class="rpt-section" data-screen-label="45 leads quentes">
+  <div class="rpt-head">
+    <div class="t">
+      <span class="eyebrow"><span class="num">01.</span> Lista priorizada</span>
+      <h2>Os 45 leads quentes sem conversão.</h2>
+      <p>Filtre por status ou prioridade, ou busque por ID, origem e tema da conversa.</p>
+    </div>
+    <div class="count">45<sup>leads</sup></div>
+  </div>
+
+  <div class="filterbar">
+    <div class="filter-group">
+      <span class="glab">Status</span>
+      <button class="chip active" data-filter="status" data-value="all">Todos</button>
+      <button class="chip risco" data-filter="status" data-value="risco">Risco</button>
+      <button class="chip revisar" data-filter="status" data-value="revisar_dados">Revisar dados</button>
+      <button class="chip acomp" data-filter="status" data-value="em_acompanhamento">Acompanhar</button>
+    </div>
+    <div class="filter-group">
+      <span class="glab">Prioridade</span>
+      <button class="chip active" data-filter="prio" data-value="all">Todas</button>
+      <button class="chip" data-filter="prio" data-value="alta">Alta</button>
+      <button class="chip" data-filter="prio" data-value="media">Média</button>
+    </div>
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path></svg><input type="text" id="q" placeholder="Buscar ID, origem ou tema…" autocomplete="off"></label>
+  </div>
+  <div style="padding:12px 0 16px;"><span class="filter-meta">Exibindo <b id="shown">45</b> de 45 leads</span></div>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead>
+        <tr>
+          <th>Lead ID</th>
+          <th>Origem Kommo</th>
+          <th>Status</th>
+          <th>Prioridade</th>
+          <th>Resumo da conversa</th>
+        </tr>
+      </thead>
+      <tbody id="tbody45">
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19336651 site lead do site com perimenopausa/dm2 pediu valor e convênio, recebeu investimento e não agendou.">
+          <td class="c-id">19336651</td>
+          <td class="c-origem">Site</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Lead do site com perimenopausa/DM2 pediu valor e convênio, recebeu investimento e não agendou.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19346783 instagram lead quente de climatério pediu informações, recebeu investimento e ficou sem fechamento registrado.">
+          <td class="c-id">19346783</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Lead quente de climatério pediu informações, recebeu investimento e ficou sem fechamento registrado.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19348535 instagram lead tentante demonstrou fit forte, perguntou convênio/valor e parou ao falar com o marido.">
+          <td class="c-id">19348535</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Lead tentante demonstrou fit forte, perguntou convênio/valor e parou ao falar com o marido.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19358097 indicação escolheu data, mas não enviou dados para concluir o agendamento.">
+          <td class="c-id">19358097</td>
+          <td class="c-origem">Indicação</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Escolheu data, mas não enviou dados para concluir o agendamento.</td>
+        </tr>
+        <tr class="lead-row flagged" data-status="revisar_dados" data-prio="alta" data-text="19376037 indicação pagou sinal e agendou, mas pediu cancelamento por logística internacional.">
+          <td class="c-id">19376037</td>
+          <td class="c-origem">Indicação</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pagou sinal e agendou, mas pediu cancelamento por logística internacional.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19420968 instagram buscava endometriose, recebeu investimento, mas o desfecho ficou em áudios sem transcrição.">
+          <td class="c-id">19420968</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Buscava endometriose, recebeu investimento, mas o desfecho ficou em áudios sem transcrição.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19460578 instagram perguntou valor, equipe multi e parcelamento, mas não agendou.">
+          <td class="c-id">19460578</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Perguntou valor, equipe multi e parcelamento, mas não agendou.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19470072 site chegou até escolha de data, envio de dados e sinal, mas precisa confirmar pagamento.">
+          <td class="c-id">19470072</td>
+          <td class="c-origem">Site</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Chegou até escolha de data, envio de dados e sinal, mas precisa confirmar pagamento.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19512568 indicação alta intenção, perguntou sobre investimento e método trizi 360, mas não finalizou.">
+          <td class="c-id">19512568</td>
+          <td class="c-origem">Indicação</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Alta intenção, perguntou sobre investimento e Método Trizi 360, mas não finalizou.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19515684 paciente da base chegou até dados e sinal. precisa confirmar pagamento/agendamento no crm.">
+          <td class="c-id">19515684</td>
+          <td class="c-origem">Paciente da Base</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Chegou até dados e sinal. Precisa confirmar pagamento/agendamento no CRM.</td>
+        </tr>
+        <tr class="lead-row" data-status="revisar_dados" data-prio="alta" data-text="19521732 instagram dor forte em emagrecimento, pediu valores e aceitou datas, mas decisão ficou em áudio.">
+          <td class="c-id">19521732</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge revisar">Revisar dados</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Dor forte em emagrecimento, pediu valores e aceitou datas, mas decisão ficou em áudio.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19336897 paciente hospital brasil paciente antiga perguntou convênio, reembolso, valor e agenda; recebeu datas, mas não confirmou.">
+          <td class="c-id">19336897</td>
+          <td class="c-origem">Paciente Hospital Brasil</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Paciente antiga perguntou convênio, reembolso, valor e agenda; recebeu datas, mas não confirmou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19340947 instagram dor clínica complexa, pediu convênio e valor, recebeu investimento, mas não avançou.">
+          <td class="c-id">19340947</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Dor clínica complexa, pediu convênio e valor, recebeu investimento, mas não avançou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19341331 instagram mulher 40+, emagrecimento/insônia, ficou de confirmar ida a sp com o marido.">
+          <td class="c-id">19341331</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Mulher 40+, emagrecimento/insônia, ficou de confirmar ida a SP com o marido.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19347337 instagram online de pernambuco, pediu valor para emagrecimento/resistência à insulina e não avançou.">
+          <td class="c-id">19347337</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Online de Pernambuco, pediu valor para emagrecimento/resistência à insulina e não avançou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19358581 instagram sintomas intensos, pediu encaixe urgente, mas não concluiu agendamento.">
+          <td class="c-id">19358581</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Sintomas intensos, pediu encaixe urgente, mas não concluiu agendamento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19366991 instagram pediu objetivamente o valor e não queria detalhar sintomas. recebeu investimento, mas não agendou.">
+          <td class="c-id">19366991</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pediu objetivamente o valor e não queria detalhar sintomas. Recebeu investimento, mas não agendou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19372653 instagram perguntou diu e valor, relatou acne adulta/hormônios, recebeu investimento e não avançou.">
+          <td class="c-id">19372653</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Perguntou DIU e valor, relatou acne adulta/hormônios, recebeu investimento e não avançou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19372761 instagram dor em menopausa, recebeu valor e datas, mas não finalizou agendamento.">
+          <td class="c-id">19372761</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Dor em menopausa, recebeu valor e datas, mas não finalizou agendamento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19403003 indicação indicação com endometriose, perguntou convênio, recebeu valor e não finalizou.">
+          <td class="c-id">19403003</td>
+          <td class="c-origem">Indicação</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Indicação com endometriose, perguntou convênio, recebeu valor e não finalizou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19408811 instagram perguntou convênio, continuou após saber que era particular, recebeu valor e não agendou.">
+          <td class="c-id">19408811</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Perguntou convênio, continuou após saber que era particular, recebeu valor e não agendou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19415287 instagram dor forte em perimenopausa/endometriose, recebeu valor e não avançou para data.">
+          <td class="c-id">19415287</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Dor forte em perimenopausa/endometriose, recebeu valor e não avançou para data.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19415549 sem origem pediu valores, relatou baixa libido/cansaço, mas não recebeu fechamento claro e foi encerrado.">
+          <td class="c-id">19415549</td>
+          <td class="c-origem">Sem origem</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pediu valores, relatou baixa libido/cansaço, mas não recebeu fechamento claro e foi encerrado.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19423038 instagram perimenopausa e convênio, recebeu agenda mas decidiu não seguir agora.">
+          <td class="c-id">19423038</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Perimenopausa e convênio, recebeu agenda mas decidiu não seguir agora.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19428868 paciente hospital brasil pediu valor, relatou sintomas e adiou agendamento para o mês seguinte por questão financeira.">
+          <td class="c-id">19428868</td>
+          <td class="c-origem">Paciente Hospital Brasil</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pediu valor, relatou sintomas e adiou agendamento para o mês seguinte por questão financeira.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19451442 paciente hospital brasil recebeu datas e ficou de avaliar com o esposo.">
+          <td class="c-id">19451442</td>
+          <td class="c-origem">Paciente Hospital Brasil</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Recebeu datas e ficou de avaliar com o esposo.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19459648 instagram dor hormonal/endometriose, recebeu investimento e não avançou para agenda.">
+          <td class="c-id">19459648</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Dor hormonal/endometriose, recebeu investimento e não avançou para agenda.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19474030 instagram sintomas fortes de perimenopausa, recebeu investimento e não avançou.">
+          <td class="c-id">19474030</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Sintomas fortes de perimenopausa, recebeu investimento e não avançou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19491736 sem origem pediu valor, mas recebeu qualificação genérica antes da resposta sobre investimento.">
+          <td class="c-id">19491736</td>
+          <td class="c-origem">Sem origem</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pediu valor, mas recebeu qualificação genérica antes da resposta sobre investimento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19502284 instagram pediu valor para hormônio/emagrecimento e decidiu não agendar agora.">
+          <td class="c-id">19502284</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pediu valor para hormônio/emagrecimento e decidiu não agendar agora.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19505474 instagram ex-paciente, perguntou valor e reposição hormonal, mas não finalizou agendamento.">
+          <td class="c-id">19505474</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Ex-paciente, perguntou valor e reposição hormonal, mas não finalizou agendamento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19513344 instagram indicada, dor forte em menopausa e peso, mas sem avanço após explicação inicial.">
+          <td class="c-id">19513344</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Indicada, dor forte em menopausa e peso, mas sem avanço após explicação inicial.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="alta" data-text="19519048 instagram pediu valor e agenda, recebeu investimento e não avançou depois.">
+          <td class="c-id">19519048</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Pediu valor e agenda, recebeu investimento e não avançou depois.</td>
+        </tr>
+        <tr class="lead-row" data-status="em_acompanhamento" data-prio="alta" data-text="19351055 instagram dor clara, recebeu valor e datas, mas ficou de responder e não confirmou.">
+          <td class="c-id">19351055</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge acomp">Acompanhar</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Dor clara, recebeu valor e datas, mas ficou de responder e não confirmou.</td>
+        </tr>
+        <tr class="lead-row" data-status="em_acompanhamento" data-prio="alta" data-text="19451736 instagram recebeu valor e datas, mas ficou de verificar agenda e não confirmou.">
+          <td class="c-id">19451736</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge acomp">Acompanhar</span></td>
+          <td><span class="prio alta">Alta</span></td>
+          <td class="c-resumo">Recebeu valor e datas, mas ficou de verificar agenda e não confirmou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19340619 instagram online da bahia, pediu valores e forma de agendar, recebeu investimento e não avançou.">
+          <td class="c-id">19340619</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Online da Bahia, pediu valores e forma de agendar, recebeu investimento e não avançou.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19347455 instagram dor forte em perimenopausa, travou por investimento.">
+          <td class="c-id">19347455</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Dor forte em perimenopausa, travou por investimento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19358147 sem origem ex-paciente interessada em emagrecimento não avançou e recebeu encerramento inadequado.">
+          <td class="c-id">19358147</td>
+          <td class="c-origem">Sem origem</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Ex-paciente interessada em emagrecimento não avançou e recebeu encerramento inadequado.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19491028 paciente da base pediu consulta presencial, mas travou por orçamento após receber investimento.">
+          <td class="c-id">19491028</td>
+          <td class="c-origem">Paciente da Base</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Pediu consulta presencial, mas travou por orçamento após receber investimento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19511542 instagram queixa ginecológica relevante, recebeu investimento e disse que não era para ela agora.">
+          <td class="c-id">19511542</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Queixa ginecológica relevante, recebeu investimento e disse que não era para ela agora.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19512356 instagram dor clara em saúde/emagrecimento, parou por orçamento após receber investimento.">
+          <td class="c-id">19512356</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Dor clara em saúde/emagrecimento, parou por orçamento após receber investimento.</td>
+        </tr>
+        <tr class="lead-row" data-status="risco" data-prio="media" data-text="19514100 instagram pediu valor, entendeu a proposta, mas disse que não poderia seguir agora.">
+          <td class="c-id">19514100</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge risco">Risco</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Pediu valor, entendeu a proposta, mas disse que não poderia seguir agora.</td>
+        </tr>
+        <tr class="lead-row" data-status="em_acompanhamento" data-prio="media" data-text="19332411 sem origem interessada em emagrecimento ouviu os áudios depois, mas não avançou para valor ou agenda.">
+          <td class="c-id">19332411</td>
+          <td class="c-origem">Sem origem</td>
+          <td><span class="badge acomp">Acompanhar</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Interessada em emagrecimento ouviu os áudios depois, mas não avançou para valor ou agenda.</td>
+        </tr>
+        <tr class="lead-row" data-status="em_acompanhamento" data-prio="media" data-text="19418371 instagram relatou emagrecimento, recebeu explicação e não avançou.">
+          <td class="c-id">19418371</td>
+          <td class="c-origem">Instagram</td>
+          <td><span class="badge acomp">Acompanhar</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Relatou emagrecimento, recebeu explicação e não avançou.</td>
+        </tr>
+        <tr class="lead-row" data-status="em_acompanhamento" data-prio="media" data-text="19495096 tráfego dor clara em menopausa/hormônios, mas sem avanço após explicação inicial.">
+          <td class="c-id">19495096</td>
+          <td class="c-origem">Tráfego</td>
+          <td><span class="badge acomp">Acompanhar</span></td>
+          <td><span class="prio media">Média</span></td>
+          <td class="c-resumo">Dor clara em menopausa/hormônios, mas sem avanço após explicação inicial.</td>
+        </tr>
+        <tr id="emptyrow" style="display:none;"><td class="empty" colspan="5">Nenhum lead corresponde aos filtros selecionados.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="rpt-note">
+  <div class="inner">
+    <span class="lead-id">Lead 19376037</span>
+    <p>Está entre os 45 quentes porque pediu cancelamento/reembolso após pagar sinal e agendar — mas <strong>não entra entre os 20 mais próximos de fechar</strong>. O problema dele não é follow-up comercial: é logística internacional e política de atendimento para paciente fora do Brasil.</p>
+  </div>
+</div>
+
+<section class="rpt-section" data-screen-label="20 mais próximos">
+  <div class="rpt-head">
+    <div class="t">
+      <span class="eyebrow"><span class="num">02.</span> Fila de fechamento</span>
+      <h2>Os 20 mais próximos de fechar.</h2>
+      <p>Quem já chegou em data, agenda, dados, sinal, pagamento pendente, encaixe urgente ou decisão com o cônjuge.</p>
+    </div>
+    <div class="count">20<sup>prontos</sup></div>
+  </div>
+
+  <div class="dtable-wrap">
+    <table class="dtable rank">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Lead ID</th>
+          <th>Origem</th>
+          <th>Por que está perto de fechar</th>
+          <th>Próxima ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="c-rank">1</td>
+          <td class="c-id">19470072</td>
+          <td class="c-origem">Site</td>
+          <td>Escolheu data, enviou dados e recebeu solicitação de sinal. Falta confirmar pagamento.</td>
+          <td class="c-action">Conferir se pagou o sinal. Se não pagou, retomar para concluir.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">2</td>
+          <td class="c-id">19515684</td>
+          <td class="c-origem">Paciente da Base</td>
+          <td>Enviou dados e recebeu solicitação de sinal. Falta confirmação final.</td>
+          <td class="c-action">Verificar pagamento/agendamento no CRM.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">3</td>
+          <td class="c-id">19358097</td>
+          <td class="c-origem">Indicação</td>
+          <td>Escolheu 14/07, mas não enviou dados.</td>
+          <td class="c-action">Retomar pedindo dados para preservar a data.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">4</td>
+          <td class="c-id">19428868</td>
+          <td class="c-origem">Paciente Hospital Brasil</td>
+          <td>Disse que agendaria no mês seguinte quando o pagamento caísse.</td>
+          <td class="c-action">Criar follow-up exatamente no timing financeiro citado.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">5</td>
+          <td class="c-id">19358581</td>
+          <td class="c-origem">Instagram</td>
+          <td>Pediu encaixe urgente e disse que estava passando mal.</td>
+          <td class="c-action">Retomar com urgência, encaixe ou lista de espera.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">6</td>
+          <td class="c-id">19341331</td>
+          <td class="c-origem">Instagram</td>
+          <td>Ficou de confirmar ida a SP com o marido.</td>
+          <td class="c-action">Oferecer datas presenciais e sugerir pré-reserva.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">7</td>
+          <td class="c-id">19336897</td>
+          <td class="c-origem">Paciente Hospital Brasil</td>
+          <td>Paciente antiga, perguntou agenda e recebeu 23/06 ou 06/07.</td>
+          <td class="c-action">Pedir escolha objetiva entre datas.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">8</td>
+          <td class="c-id">19372761</td>
+          <td class="c-origem">Instagram</td>
+          <td>Recebeu 23/06 às 09h ou 06/07 às 15h30, mas não confirmou.</td>
+          <td class="c-action">Retomar perguntando qual das datas faz mais sentido.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">9</td>
+          <td class="c-id">19351055</td>
+          <td class="c-origem">Instagram</td>
+          <td>Recebeu valor e datas, respondeu “Ok, já te falo”.</td>
+          <td class="c-action">Retomar perguntando se ainda quer uma das opções.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">10</td>
+          <td class="c-id">19451736</td>
+          <td class="c-origem">Instagram</td>
+          <td>Recebeu datas e ficou de verificar agenda.</td>
+          <td class="c-action">Retomar: “conseguiu verificar sua agenda?”</td>
+        </tr>
+        <tr>
+          <td class="c-rank">11</td>
+          <td class="c-id">19451442</td>
+          <td class="c-origem">Paciente Hospital Brasil</td>
+          <td>Recebeu opções de agenda e ficou de avaliar com o esposo.</td>
+          <td class="c-action">Retomar focando na dor e decisão com esposo.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">12</td>
+          <td class="c-id">19348535</td>
+          <td class="c-origem">Instagram</td>
+          <td>Tentante, fit forte, perguntou agenda e disse que falaria com o marido.</td>
+          <td class="c-action">Retomar sugerindo reserva de data enquanto conversa com ele.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">13</td>
+          <td class="c-id">19521732</td>
+          <td class="c-origem">Instagram</td>
+          <td>Dor forte em emagrecimento, pediu valores e aceitou receber datas. Desfecho ficou em áudio.</td>
+          <td class="c-action">Revisar/transcrever áudio e retomar com datas.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">14</td>
+          <td class="c-id">19460578</td>
+          <td class="c-origem">Instagram</td>
+          <td>Menopausa, emagrecimento travado, perguntou equipe multi e parcelamento.</td>
+          <td class="c-action">Retomar explicando consulta x Método Trizi 360 e condições.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">15</td>
+          <td class="c-id">19346783</td>
+          <td class="c-origem">Instagram</td>
+          <td>Climatério, pediu mais informações após follow-up, recebeu investimento.</td>
+          <td class="c-action">Retomar com proposta objetiva de agenda.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">16</td>
+          <td class="c-id">19420968</td>
+          <td class="c-origem">Instagram</td>
+          <td>Endometriose, recebeu investimento, mas decisão ficou em áudios.</td>
+          <td class="c-action">Revisar áudio e retomar com pergunta de fechamento.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">17</td>
+          <td class="c-id">19423038</td>
+          <td class="c-origem">Instagram</td>
+          <td>Perimenopausa, recebeu agenda, mas disse “no momento não”.</td>
+          <td class="c-action">Entrar em nutrição e retomar com cuidado sobre convênio/particular.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">18</td>
+          <td class="c-id">19340619</td>
+          <td class="c-origem">Instagram</td>
+          <td>Pediu valores e forma de agendar, recebeu investimento e respondeu “Ok”.</td>
+          <td class="c-action">Perguntar se deseja ver próximas datas online.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">19</td>
+          <td class="c-id">19491028</td>
+          <td class="c-origem">Paciente da Base</td>
+          <td>Travou por orçamento, mas era paciente da base e queria presencial.</td>
+          <td class="c-action">Retomar com valor percebido, sinal e organização futura.</td>
+        </tr>
+        <tr>
+          <td class="c-rank">20</td>
+          <td class="c-id">19332411</td>
+          <td class="c-origem">Sem origem</td>
+          <td>Ouviu os áudios, mas não avançou para valor ou agenda.</td>
+          <td class="c-action">Enviar resumo textual + investimento + datas.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <h5>Anexo da auditoria</h5>
+        <div class="who">Recuperação de leads<span>Instituto Trizi · Dra. Janifer Trizi</span></div>
+        <p>Recorte de 12 a 26 de maio de 2026. Lista derivada dos 88 leads auditados um a um, cruzando a planilha do Kommo com cada conversa.</p>
+      </div>
+      <div>
+        <h5>Como usar</h5>
+        <p class="timeline">
+          <span class="w">1.</span> Comece pela fila de fechamento<br/>
+          <span class="w">2.</span> Use o resumo para personalizar a retomada<br/>
+          <span class="w">3.</span> Atualize o status no CRM a cada contato
+        </p>
+      </div>
+      <div>
+        <h5>Confidencialidade</h5>
+        <p class="conf"><strong>Camada operacional</strong>Contém IDs de lead e resumos de atendimento. Sem dados sensíveis de saúde. Distribuição restrita à liderança e ao time comercial do Instituto Trizi.</p>
+      </div>
+    </div>
+    <div class="foot-strip">
+      <div>© 2026 · Auditoria Comercial Instituto Trizi</div>
+      <div class="r"><span>Anexo A</span><span>V 1.0 · 27 mai</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var state = { status:'all', prio:'all', q:'' };
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#tbody45 .lead-row'));
+  var shown = document.getElementById('shown');
+  var emptyRow = document.getElementById('emptyrow');
+
+  function apply(){
+    var n = 0;
+    rows.forEach(function(tr){
+      var ok = (state.status==='all' || tr.dataset.status===state.status)
+            && (state.prio==='all' || tr.dataset.prio===state.prio)
+            && (state.q==='' || tr.dataset.text.indexOf(state.q)>-1);
+      tr.style.display = ok ? '' : 'none';
+      if(ok) n++;
+    });
+    shown.textContent = n;
+    emptyRow.style.display = n===0 ? '' : 'none';
+  }
+
+  document.querySelectorAll('.chip').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = btn.dataset.filter, v = btn.dataset.value;
+      state[f] = v;
+      document.querySelectorAll('.chip[data-filter="'+f+'"]').forEach(function(b){ b.classList.toggle('active', b===btn); });
+      apply();
+    });
+  });
+  document.getElementById('q').addEventListener('input', function(e){
+    state.q = e.target.value.trim().toLowerCase(); apply();
+  });
+})();
+</script>
+
+</body>
+</html>
